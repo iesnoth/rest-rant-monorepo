@@ -17,6 +17,7 @@ router.post('/', async (req, res) => {
     } else {
         req.session.userId = user.userId
         res.json({ user })
+        console.log(user.userId)
     }
 })
 
@@ -34,5 +35,7 @@ router.get('/profile', async (req, res) => {
         res.json(null)
     }
 })
+
+
 
 module.exports = router
