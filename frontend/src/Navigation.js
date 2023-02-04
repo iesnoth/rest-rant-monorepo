@@ -8,6 +8,12 @@ function Navigation() {
 
     const { currentUser } = useContext(CurrentUser)
 
+    // const logout = () => {
+    //     localStorage.removeItem('token')
+    //     window.location.reload(false)
+
+    // }
+
     let loginActions = (
         <>
             <li style={{ float: 'right' }}>
@@ -25,9 +31,19 @@ function Navigation() {
 
     if (currentUser) {
         loginActions = (
-            <li style={{ float: 'right' }}>
-                Logged in as {currentUser.firstName} {currentUser.lastName}
-            </li>
+            <>
+                <li style={{ float: 'right' }}>
+                    Logged in as {currentUser.firstName} {currentUser.lastName}
+                </li>
+                <li style={{ float: 'right' }}>
+                    <a href="#" onClick={() => {
+                        localStorage.removeItem('token')
+                        window.location.reload(false)
+                    }}>
+                        Log Out
+                    </a>
+                </li>
+            </>
         )
     }
 
