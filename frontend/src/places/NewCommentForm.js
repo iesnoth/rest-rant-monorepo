@@ -22,9 +22,9 @@ function NewCommentForm({ place, onSubmit }) {
         fetchData()
     }, [])
 
-    let authorOptions = authors.map(author => {
-        return <option key={author.userId} value={author.userId}>{author.firstName} {author.lastName}</option>
-    })
+    // let authorOptions = authors.map(author => {
+    //     return <option key={author.userId} value={author.userId}>{author.firstName} {author.lastName}</option>
+    // })
 
     function handleSubmit(e) {
         e.preventDefault()
