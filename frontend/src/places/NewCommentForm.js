@@ -29,7 +29,7 @@ function NewCommentForm({ place, onSubmit }) {
     function handleSubmit(e) {
         e.preventDefault()
         onSubmit(comment)
-        setComment({
+        setComment({          
             content: '',
             stars: 3,
             rant: false,
@@ -55,9 +55,9 @@ function NewCommentForm({ place, onSubmit }) {
             <div className="row">
                 <div className="form-group col-sm-4">
                     <label htmlFor="state">Author</label>
-                    <select className="form-control" value={comment.authorId} onChange={e => setComment({ ...comment, authorId: e.target.value })}>
+                    {/* <select className="form-control" value={comment.authorId} onChange={e => setComment({ ...comment, authorId: e.target.value })}>
                         {authorOptions}
-                    </select>
+                    </select> */}
                 </div>
                 <div className="form-group col-sm-4">
                     <label htmlFor="stars">Star Rating</label>
