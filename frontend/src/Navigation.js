@@ -30,7 +30,7 @@ function Navigation() {
             </li>
             <li style={{ float: 'right' }}>
                 <a href="#" onClick={() => {
-                    localStorage.removeItem('token')
+                    // req.currentUser.userId = null
                     window.location.reload(false)
                 }}>
                     Log Out
